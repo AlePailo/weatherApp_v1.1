@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App V1.1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <div class="card flex-center" id="startCard">
+        <div id="startSearchDiv" class="flex-center">
+            <input id="startSearchInput" type="text">
+            <button id="startSearchBtn" type="button">
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div id="wrapper" class="card">
+        <div class="loader">
+        </div>
+    </div>
+
+    <div id="weatherCard" class="card">
+
+        <div id="searchDiv">
+            <input id="searchInput" type="text">
+            <button id="searchBtn" type="button">
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+            </button>
+        </div>
+
+        <div id="info">
+
+            <div id="info1" class="flex-center">
+                <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i><span>Collegno</span></p>
+                <p><i class="fa-solid fa-calendar-days" style="color: #ffffff;"></i><span id="currentDay">Venerdì 21 giugno 2024</span></p>
+            </div>
+
+            <div id="info2">
+                <div id="info2-sub-general" class="info2-sub flex-center">
+                    <div class="flex-center">
+                        <img id="weatherImg" src="img/cloudy.png">
+                    </div>
+                    <div id="currentTemperature" class="flex-center">24°C</div>
+                </div>
+                <div id="info2-sub-more" class="info2-sub flex-center">
+                    <div class="flex-center fd-col">
+                        <i class="fa-solid fa-cloud-showers-heavy fa-2xl" style="color: #ffffff;"></i>
+                        <p id="currentRainProb">30%</p>
+                    </div>
+                    <div class="flex-center fd-col">
+                        <i class="fa-solid fa-droplet fa-2xl" style="color: #ffffff;"></i>
+                        <p id="currentHumidity">30%</p>
+                    </div>
+                    <div class="flex-center fd-col">
+                        <i class="fa-solid fa-wind fa-2xl" style="color: #ffffff;"></i>
+                        <p id="currentWindSpeed">30%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="nextDays" class="flex-center">
+            <div class="flex-center fd-col">
+                <div>Oggi</div>
+                <img src="img/foggy.png">
+                <div>
+                    <p>10°/20°</p>
+                </div>
+            </div>
+            <div class="flex-center fd-col">
+                <div>Lun 24</div>
+                <img src="img/rainy.png">
+                <div>
+                    <p>10°/20°</p>
+                </div>
+            </div>
+            <div class="flex-center fd-col">
+                <div>Mar 25</div>
+                <img src="img/sunny.png">
+                <div>
+                    <p>10°/20°</p>
+                </div>
+            </div>
+            <div class="flex-center fd-col">
+                <div>Mer 26</div>
+                <img src="img/thunderstorm.png">
+                <div>
+                    <p>10°/20°</p>
+                </div>
+            </div>
+            <div class="flex-center fd-col">
+                <div>Gio 27</div>
+                <img src="img/night.png">
+                <div>
+                    <p>10°/20°</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div id="hourlyWeather" class="card flex-center">
+        <i id="hourlyWeatherBack" class="fa-solid fa-angle-left fa-2xl"></i>
+        <h2></h2>
+        <div id="hourlyWeatherInnerContainer">
+            <div class="hourlyInfos flex-center">
+                <div class="hourlyInfosSub1 flex-center">10:00</div>
+                <div class="hourlyInfosSub2 flex-center">
+                    <img src="img/cloudy.png">
+                    <p>20°</p>
+                </div>
+                <div class="hourlyInfosSub3 flex-center fd-col">
+                    <p class="flex-center"><i class="fa-solid fa-cloud-showers-heavy" style="color: #ffffff;"></i><span>10%</span></p>
+                    <p class="flex-center"><i class="fa-solid fa-droplet" style="color: #ffffff;"></i><span>10%</span></p>
+                    <p class="flex-center"><i class="fa-solid fa-wind" style="color: #ffffff;"></i><span>1KM/H</span></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="cred.js"></script>
+</body>
+</html>
